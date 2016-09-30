@@ -1,0 +1,121 @@
+<html>
+
+    <head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="styles.css" type="text/css"/>
+		
+		
+    </head>
+
+    <body>
+		<header>
+			<h1>Top Amazing Places to visit in the USA </h1>
+			<h2>Resize this responsive Page!</h2>		
+		</header>
+		<main>
+		
+			<div class="place slide">					
+					<img class="place_img" src="img1.jpg">
+					<div class="place_title"><h2>New York, NY</h2></div>
+					<div class="place_desc"><p>New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. </p></div>
+				</div>
+				<div class="place slide">
+					<img class="place_img" src="img2.jpg">
+					<div class="place_title"><h2>Denali, AK</h2></div>
+					<div class="place_desc"><p>Denali National Park and Preserve is a national park and preserve located in Interior Alaska, centered on Denali, the highest mountain in North America.</p>	</div>		
+				</div>
+				<div class="place slide">
+					<img class="place_img" src="img3.jpg">
+					<div class="place_title"><h2>Las Vegas, NV</h2>		</div>	
+					<div class="place_desc"><p>Las Vegas, in Nevada’s Mojave Desert, is a resort city famed for its vibrant nightlife, centered around 24-hour casinos and other entertainment options</p></div>			
+				</div>
+				<div class="place slide">
+					<img class="place_img" src="img4.jpg">
+					<div class="place_title"><h2>Yosemite, CA</h2></div>		
+					<div class="place_desc"><p>It’s famed for its giant, ancient sequoia trees, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>	</div>		
+				</div>
+				<div class="place slide">
+					<img class="place_img" src="img5.jpg">
+					<div class="place_title"><h2>Yellowstone, WY</h2>			</div>
+					<div class="place_desc"><p>Yellowstone National Park is a nearly 3,500-sq.-mile wilderness recreation area atop a volcanic hot spot.</p>	</div>		
+				</div>
+				<div class="place slide">
+					<img class="place_img" src="img6.jpg">
+					<div class="place_title"><h2>Grand Canyon, AZ</h2></div>			
+					<div class="place_desc"><p>It is home to much of the immense Grand Canyon, with its layered bands of red rock revealing millions of years of geological history.</p>	</div>		
+				</div>
+				<div class="place slide">
+					<img class="place_img" src="img7.jpg">
+					<div class="place_title"><h2>San Francisco, CA</h2></div>			
+					<div class="place_desc"><p>San Francisco, in northern California, is a hilly city on the tip of a peninsula surrounded by the Pacific Ocean and San Francisco Bay.</p>	</div>		
+				</div>
+				<div class="place slide">
+					<img class="place_img" src="img8.jpg">
+					<div class="place_title"><h2>Washington, D.C.</h2>			</div>
+					<div class="place_desc"><p>Washington, DC, the U.S. capital, is a compact city on the Potomac River, bordering the states of Maryland and Virginia.</p></div>
+				</div>
+						
+			<div class="m-center">
+				<section class="m-button">
+					<button class="m-btn " onclick="plusDivs(-1)"> ❮ Previous </button>
+					<button class="m-btn " onclick="plusDivs(1)"> Next ❯ </button>
+				</section>
+				<button class="slide-num " onclick="currentDiv(1)">1</button>
+				<button class="slide-num " onclick="currentDiv(2)">2</button>
+				<button class="slide-num " onclick="currentDiv(3)">3</button>
+				<button class="slide-num " onclick="currentDiv(4)">4</button>
+				<button class="slide-num " onclick="currentDiv(5)">5</button>
+				<button class="slide-num " onclick="currentDiv(6)">6</button>
+				<button class="slide-num " onclick="currentDiv(7)">7</button>
+				<button class="slide-num " onclick="currentDiv(8)">8</button>				
+			</div>
+		</main>
+		<footer>
+			<section class="ft ft_left">
+				<ul>
+					<li><a title="Write for us" href="#">Write for us</a></li>
+					<li><a title="Go for FAQ's" href="#">FAQ's</a></li>
+					<li><a title="Contact us" href="#">Contact</a></li>
+				</ul>												
+			</section>
+			<section class="ft ft_right">
+				<p title="used to show characters are reserved">@ Copyright 2016. All Right Reserved.</p>
+			</section>
+		</footer>
+    </body>
+	<script>
+			var slideIndex = 1;
+			showDivs(slideIndex);
+			
+			function plusDivs(n){
+			showDivs(slideIndex += n);
+			}
+			
+			function currentDiv(n){
+			showDivs(slideIndex = n);
+			}
+			function showDivs(n){
+				var i;
+				var x = document.getElementsByClassName("slide");
+				var dots = document.getElementsByClassName("slide-num");
+				if(n > x.length){ slideIndex = 1 }
+				if(n < 1) { slideIndex = x.length }
+				for(i=0; i < x.length; i++)
+				{
+					x[i].style.display = "none";
+				}
+				for(i=0; i < dots.length; i++)
+				{
+					dots[i].className = dots[i].className.replace(" m-red" , "");
+				}
+				x[slideIndex-1].style.display = "block";				
+				dots[slideIndex-1].className += "m-red";
+			}
+			
+			function myFunction() {
+    var x = document.getElementById("myImg").src;
+    document.getElementById("demo").innerHTML = x;
+}
+		</script>
+</html>
