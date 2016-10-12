@@ -1,7 +1,7 @@
 # Assignment-Build-a-Responsive-Web-Page
 
 Demo:
-https://pallavibhakare.github.io/Assignment-Build-a-Responsive-Web-Page/
+https://pallavibhakare.github.io/Responsive-Web-Page/
 
 Course Name: Responsive Website Basics: Code with HTML, CSS, and JavaScript
 
